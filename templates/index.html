@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="static/custom.css" rel="stylesheet" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Welcome to Caf Wizard</h2>
+    <br>
+
+    <div>
+      <ul class="nav nav-pills">
+        <li class="active"><a data-toggle="pill" href="#caf">Caf</a></li>
+        <li><a data-toggle="pill" href="#meal-exchange">Meal Exchange</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="caf" class="tab-pane fade in active">
+          <!-- Caf Menu -->
+          {% for daypart in dayparts %}
+            <table class="table table-striped">
+              <thead class="thead-default">
+                <tr>
+                  <th>{{daypart['label']}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in daypart['items'] %}
+                  <tr>
+                    <td class="vertical-center">{{item}}</td>
+                  </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+          {% endfor %}
+        </div>
+        <div id="meal-exchange" class="tab-pane fade">
+          <h3>Coming Soon!</h3>
+        </div>
+      </div>
+    </div
+  </body>
+</html>

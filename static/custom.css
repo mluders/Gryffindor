@@ -1,0 +1,15 @@
+.table thead{
+  background-color: #ECEEEF;
+  color: #55595C;
+  font-size: 1.7em;
+}
+
+.table tbody{
+  color: #373A3C;
+  font-size: 1.15em;
+}
+
+td {
+  height:50px;
+  vertical-align: middle !important;
+}
