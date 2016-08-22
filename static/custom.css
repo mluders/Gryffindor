@@ -1,16 +1,42 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+h1, h2, h3, h4, h5, h6{
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  text-align: center;
+}
+
+.nav {
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 1.25em;
+}
+
+.nav-pills a {
+    color: rgb(169, 169, 199)
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color:white;
+    background-color:rgb(116, 94, 197)
+}
+
+.centered-pills { text-align:center; }
+.centered-pills ul.nav-pills { display:inline-block; }
+.centered-pills li { display:inline; }
+.centered-pills a { float:left; }
+* html .centered-pills ul.nav-pills { display:inline; } /* IE6 */
+*+html .centered-pills ul.nav-pills { display:inline; } /* IE7 */
+
 .table thead{
     font-family: "Montserrat", helvetica, arial, sans-serif;
-    background-color: #ECEEEF;
-    color: rgb(110, 110, 110);
-    font-size: 1.5em;
+    background-color: #373A3C;
+    color: #ECEEEF;
+    font-size: 1.4em;
 }
 
 .table tbody{
     font-family: "Montserrat", helvetica, arial, sans-serif;
     color: #373A3C;
-    font-size: 1.25em;
+    font-size: 1.15em;
 }
 
 td {
