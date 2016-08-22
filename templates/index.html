@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flask Intro</title>
+    <title>Caf Wizard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="static/custom.css" rel="stylesheet" media="screen">
@@ -11,40 +11,44 @@
             crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Welcome to Caf Wizard</h2>
-    <br>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Welcome to Caf Wizard</h2>
+        <br>
 
-    <div>
-      <ul class="nav nav-pills">
-        <li class="active"><a data-toggle="pill" href="#caf">Caf</a></li>
-        <li><a data-toggle="pill" href="#meal-exchange">Meal Exchange</a></li>
-      </ul>
+        <div>
+          <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" href="#caf">Caf</a></li>
+            <li><a data-toggle="pill" href="#meal-exchange">Meal Exchange</a></li>
+          </ul>
 
-      <div class="tab-content">
-        <div id="caf" class="tab-pane fade in active">
-          <!-- Caf Menu -->
-          {% for daypart in dayparts %}
-            <table class="table table-striped">
-              <thead class="thead-default">
-                <tr>
-                  <th>{{daypart['label']}}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for item in daypart['items'] %}
-                  <tr>
-                    <td class="vertical-center">{{item}}</td>
-                  </tr>
-                {% endfor %}
+          <div class="tab-content">
+            <div id="caf" class="tab-pane fade in active">
+              <!-- Caf Menu -->
+              {% for daypart in dayparts %}
+                <table class="table table-striped">
+                  <thead class="thead-default">
+                    <tr>
+                      <th>{{daypart['label']}}<span class="pull-right">{{daypart['starttime']}} - {{daypart['endtime']}}</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for item in daypart['items'] %}
+                      <tr>
+                        <td class="vertical-center">{{item}}</td>
+                      </tr>
+                    {% endfor %}
 
-              </tbody>
-            </table>
-          {% endfor %}
-        </div>
-        <div id="meal-exchange" class="tab-pane fade">
-          <h3>Coming Soon!</h3>
-        </div>
+                  </tbody>
+                </table>
+              {% endfor %}
+            </div>
+            <div id="meal-exchange" class="tab-pane fade">
+              <h3>Coming Soon!</h3>
+            </div>
+          </div>
+        </div
       </div>
-    </div
+    </div>
   </body>
 </html>
