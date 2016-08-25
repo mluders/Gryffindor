@@ -7,16 +7,28 @@ h1, h2, h3, h4, h5, h6{
 
 .nav {
   font-family: "Montserrat", helvetica, arial, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.55em;
 }
 
 .nav-pills a {
-    color: rgb(169, 169, 199)
+    color: rgb(155, 155, 179);
+    background-color:rgb(116, 94, 197);
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color:white;
-    background-color:rgb(116, 94, 197)
+    background-color:rgb(116, 94, 197);
+}
+
+.nav-filter {
+	background-color: rgb(116, 94, 197);
+}
+
+.nav-pills>li>a:hover {
+	background-color: rgb(116, 94, 197);
+}
+.nav-pills .open>a, .nav-pills .open>a:active, .nav-pills .open>a:focus{
+	background-color: rgb(116, 94, 197);
 }
 
 .centered-pills { text-align:center; }

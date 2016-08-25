@@ -13,9 +13,8 @@
   <body>
 
     <!-- Header and navbar -->
-    <div class="row">
+    <div style ='background-color: rgb(116, 94, 197)'>
       <br>
-      <!--<h1>Caf Wizard</h2>-->
       <div class="span12 centered-pills">
         <ul class="nav nav-pills">
           <li class="active"><a data-toggle="pill" href="#caf">The Caf</a></li>
@@ -28,8 +27,7 @@
     <!-- Tableview -->
     <div class="tab-content">
       <div id="caf" class="tab-pane fade in active">
-        <!-- Caf Menu -->
-        {% for daypart in dayparts %}
+        {% for daypart in cafe_dayparts %}
           <table class="table table-striped">
             <thead class="thead-default">
               <tr>
@@ -37,18 +35,44 @@
               </tr>
             </thead>
             <tbody>
-              {% for item in daypart['items'] %}
-                <tr>
-                  <td class="vertical-center">{{item}}</td>
-                </tr>
+              {% for key, value in daypart['stations'].items() %}
+                {% for item in value %}
+                  <tr>
+                    <td class="vertical-center">{{item}}</td>
+                  </tr>
+                {% endfor %}
               {% endfor %}
-
             </tbody>
           </table>
         {% endfor %}
       </div>
       <div id="meal-exchange" class="tab-pane fade">
-        <h3>Coming Soon!</h3>
+        {% if mx_dayparts[0]['stations'].keys %}
+          <table class="table table-striped">
+            <thead class="thead-default">
+              <tr>
+                <td class="vertical-center"><h4>11:00 AM - 7:30 PM</h4></td>
+              </tr>
+            </thead>
+
+            {% for daypart in mx_dayparts %}
+              {% for key, value in daypart['stations'].items() %}
+                <thead class="thead-default">
+                  <tr>
+                    <th>{{key}}</span></th>
+                  </tr>
+                </thead>
+                {% for item in value %}
+                  <tr>
+                    <td class="vertical-center">{{item}}</td>
+                  </tr>
+                {% endfor %}
+              {% endfor %}
+            {% endfor %}
+          </table>
+        {% else %}
+          <h2> No meal exchange today :( <h2>
+        {% endif %}
       </div>
     </div>
   </body>

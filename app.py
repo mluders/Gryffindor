@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html',
-                           dayparts=data_engine.get_caf_dayparts())
+                           cafe_dayparts=data_engine.get_dayparts(17),
+                           mx_dayparts=data_engine.get_dayparts(742))
 
 #port = int(os.environ.get("PORT", 5004))
 #app.run(port=port)
