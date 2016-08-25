@@ -64,7 +64,7 @@ def get_dayparts(cafeID):
         for station in daypart['stations']:
             temp_stations = []
             for item in station['items']:
-                temp_stations.append(raw_items[item]['label'])
+                temp_stations.append(raw_items[item]['label'].title())
 
                 master_stations[station['label']] = temp_stations
 

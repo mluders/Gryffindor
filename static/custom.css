@@ -3,6 +3,13 @@
 h1, h2, h3, h4, h5, h6{
   font-family: "Montserrat", helvetica, arial, sans-serif;
   text-align: center;
+  font-size: 1.3em;
+}
+
+small {
+    font-family: "Montserrat", helvetica, arial, sans-serif;
+    font-size: 0.8em;
+    color: rgb(175, 175, 175);
 }
 
 .nav {
@@ -10,25 +17,28 @@ h1, h2, h3, h4, h5, h6{
   font-size: 1.55em;
 }
 
-.nav-pills a {
-    color: rgb(155, 155, 179);
-    background-color:rgb(116, 94, 197);
+/*
+.nav-filter {
+	background-color: rgb(200, 94, 197);
 }
+*/
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color:white;
     background-color:rgb(116, 94, 197);
 }
 
-.nav-filter {
+.nav-pills .open>a, .nav-pills .open>a:active, .nav-pills .open>a:focus{
 	background-color: rgb(116, 94, 197);
 }
 
-.nav-pills>li>a:hover {
-	background-color: rgb(116, 94, 197);
+.nav-pills a {
+    color: #c1b7e7;
+    background-color:rgb(116, 94, 197);
 }
-.nav-pills .open>a, .nav-pills .open>a:active, .nav-pills .open>a:focus{
-	background-color: rgb(116, 94, 197);
+
+.nav-pills>li>a:hover {
+	background-color:rgb(116, 94, 197);
 }
 
 .centered-pills { text-align:center; }
@@ -55,3 +65,6 @@ td {
     height:50px;
     vertical-align: middle !important;
 }
+
+.table thead > tr > th, .table tfoot > tr > th, .table thead > tr > td{ border: 0px solid #2980B9; }
+

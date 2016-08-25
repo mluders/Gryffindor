@@ -10,11 +10,11 @@ def home():
                            cafe_dayparts=data_engine.get_dayparts(17),
                            mx_dayparts=data_engine.get_dayparts(742))
 
-#port = int(os.environ.get("PORT", 5004))
-#app.run(port=port)
+port = int(os.environ.get("PORT", 5004))
+app.run(port=port)
 
 # Necessary for deployment
-if __name__ == '__main__':
+'''if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port)'''

@@ -38,7 +38,7 @@
               {% for key, value in daypart['stations'].items() %}
                 {% for item in value %}
                   <tr>
-                    <td class="vertical-center">{{item}}</td>
+                    <td class="vertical-center">{{item}}<br><small>{{key.title()}}<small></td>
                   </tr>
                 {% endfor %}
               {% endfor %}
@@ -51,7 +51,7 @@
           <table class="table table-striped">
             <thead class="thead-default">
               <tr>
-                <td class="vertical-center"><h4>11:00 AM - 7:30 PM</h4></td>
+                <th><h3>11:00 AM - 7:30 PM</h3></th>
               </tr>
             </thead>
 
@@ -59,7 +59,7 @@
               {% for key, value in daypart['stations'].items() %}
                 <thead class="thead-default">
                   <tr>
-                    <th>{{key}}</span></th>
+                    <th>{{key}}</th>
                   </tr>
                 </thead>
                 {% for item in value %}
