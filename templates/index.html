@@ -47,7 +47,7 @@
         {% endfor %}
       </div>
       <div id="meal-exchange" class="tab-pane fade">
-        {% if mx_dayparts[0]['stations'].keys %}
+        {% if mx_dayparts %}
           <table class="table table-striped">
             <thead class="thead-default">
               <tr>
@@ -71,7 +71,7 @@
             {% endfor %}
           </table>
         {% else %}
-          <h2> No meal exchange today :( <h2>
+          <h1> No meal exchange today :( <h1>
         {% endif %}
       </div>
     </div>
