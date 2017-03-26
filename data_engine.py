@@ -1,7 +1,7 @@
 import requests
 from datetime import datetime
 
-STATION_BLACKLIST = {'garden', 'pizzeria', '6th', 'grill', 'pizzeria', 'beverages', 'grain', 'gallery', 'deli', 'soft', 'serve'}
+STATION_BLACKLIST = {'garden', 'pizzeria', '6th', 'grill', 'pizzeria', 'beverages', 'grain', 'gallery', 'deli', 'soft', 'serve', 'cereals'}
 
 '''def get_caf_dayparts():
     r = requests.get('http://legacy.cafebonappetit.com/api/2/menus?cafe=17?format=jsonp')
