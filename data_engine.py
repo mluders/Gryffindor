@@ -1,6 +1,8 @@
 import requests
 from datetime import datetime
 
+STATION_BLACKLIST = {'garden', 'pizzeria', '6th', 'grill', 'pizzeria', 'beverages', 'grain', 'gallery', 'deli', 'soft', 'serve'}
+
 '''def get_caf_dayparts():
     r = requests.get('http://legacy.cafebonappetit.com/api/2/menus?cafe=17?format=jsonp')
     raw_json = r.json()
@@ -62,6 +64,10 @@ def get_dayparts(cafeID):
         master_stations = {}
 
         for station in daypart['stations']:
+            print station['label']
+            if len(set(station['label'].split()) & STATION_BLACKLIST) > 0:
+                continue
+                
             temp_stations = []
             for item in station['items']:
                 temp_stations.append(raw_items[item]['label'].title())
@@ -87,4 +93,4 @@ def get_dayparts(cafeID):
 
 
 if __name__ == "__main__":
-    print get_dayparts(742)
+    print get_dayparts(17)

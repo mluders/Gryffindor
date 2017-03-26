@@ -1,28 +1,19 @@
-@font-face {
-    font-family: 'Montserrat-Semi';
-    src: url('./fonts/Montserrat-SemiBold.ttf');
-}
-
-@font-face {
-    font-family: 'Montserrat-Medium';
-    src: url('./fonts/Montserrat-Medium.ttf');
-}
-
+#@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 h1, h2, h3, h4, h5, h6{
-  font-family: "Montserrat-Semi", helvetica, arial, sans-serif;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
   text-align: center;
   font-size: 1.3em;
 }
 
 small {
-    font-family: "Montserrat-Medium", helvetica, arial, sans-serif;
+    font-family: "Montserrat", helvetica, arial, sans-serif;
     font-size: 0.8em;
     color: rgb(175, 175, 175);
 }
 
 .nav {
-  font-family: "Montserrat-Semi", helvetica, arial, sans-serif;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
   font-size: 1.55em;
 }
 
@@ -58,14 +49,14 @@ small {
 *+html .centered-pills ul.nav-pills { display:inline; } /* IE7 */
 
 .table thead{
-    font-family: "Montserrat-Medium", helvetica, arial, sans-serif;
+    font-family: "Montserrat", helvetica, arial, sans-serif;
     background-color: #373A3C;
     color: #ECEEEF;
     font-size: 1.4em;
 }
 
 .table tbody{
-    font-family: "Montserrat-Medium", helvetica, arial, sans-serif;
+    font-family: "Montserrat", helvetica, arial, sans-serif;
     color: #373A3C;
     font-size: 1.15em;
 }
@@ -76,3 +67,4 @@ td {
 }
 
 .table thead > tr > th, .table tfoot > tr > th, .table thead > tr > td{ border: 0px solid #2980B9; }
+

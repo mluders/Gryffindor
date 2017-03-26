@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Caf Wizard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="static/custom.css" rel="stylesheet" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <!-- Header and navbar -->
+      <div style ='background-color: rgb(116, 94, 197)'>
+        <br>
+        <div class="span12 centered-pills">
+          <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" href="#caf">The Caf</a></li>
+            <li><a data-toggle="pill" href="#meal-exchange">Meal Exchange</a></li>
+          </ul>
+        </div>
+        <br>
+      </div>
+      
+      <div class="tab-content">
+        <div id="caf" class="tab-pane fade in active">
+          {% for daypart in cafe_dayparts %}
+            <table class="table table-striped">
+              <thead class="thead-default">
+                <tr>
+                  <th>{{daypart['label']}}<span class="pull-right">{{daypart['starttime']}} - {{daypart['endtime']}}</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for key, value in daypart['stations'].items() %}
+                  {% for item in value %}
+                    <tr>
+                      <td class="vertical-center">{{item}}<br><small>{{key.title()}}<small></td>
+                    </tr>
+                  {% endfor %}
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endfor %}
+        </div>
+        
+        <div id="meal-exchange" class="tab-pane fade">
+          {% if mx_dayparts %}
+            <table class="table table-striped">
+              <thead class="thead-default">
+                <tr>
+                  <th><h3>11:00 AM - 7:30 PM</h3></th>
+                </tr>
+              </thead>
+
+              {% for daypart in mx_dayparts %}
+                {% for key, value in daypart['stations'].items() %}
+                  <thead class="thead-default">
+                    <tr>
+                      <th>{{key}}</th>
+                    </tr>
+                  </thead>
+                  {% for item in value %}
+                    <tr>
+                      <td class="vertical-center">{{item}}</td>
+                    </tr>
+                  {% endfor %}
+                {% endfor %}
+              {% endfor %}
+            </table>
+          {% else %}
+            <h2> No meal exchange today :( <h2>
+          {% endif %}
+        </div>
+      </div>
+      
+      
+      
+      
+      
+  </body>
+</html>
