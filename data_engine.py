@@ -4,7 +4,7 @@ from datetime import datetime
 STATION_BLACKLIST = {'garden', 'pizzeria', '6th', 'grill', 'pizzeria', 'beverages', 'grain', 'gallery', 'deli', 'soft', 'serve', 'cereals'}
 
 '''def get_caf_dayparts():
-    r = requests.get('http://legacy.cafebonappetit.com/api/2/menus?cafe=17?format=jsonp')
+    r = requests.get('https://legacy.cafebonappetit.com/api/2/menus?cafe=17?format=jsonp')
     raw_json = r.json()
 
     raw_dayparts = raw_json['days'][0]['cafes']['17?format=jsonp']['dayparts'][0]
@@ -42,7 +42,7 @@ STATION_BLACKLIST = {'garden', 'pizzeria', '6th', 'grill', 'pizzeria', 'beverage
 
 
 def get_dayparts(cafeID):
-    r = requests.get('http://legacy.cafebonappetit.com/api/2/menus?cafe=' + str(cafeID) + '?format=jsonp')
+    r = requests.get('https://legacy.cafebonappetit.com/api/2/menus?cafe=' + str(cafeID) + '?format=jsonp')
     raw_json = r.json()
 
     raw_dayparts = raw_json['days'][0]['cafes'][str(cafeID) + '?format=jsonp']['dayparts'][0]
